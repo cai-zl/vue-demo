@@ -1,0 +1,18 @@
+@import './base.css';
+
+#app {
+    margin: 0 auto;
+    padding: 0;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: block;
+    clear: both;
+}
