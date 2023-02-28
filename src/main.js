@@ -8,7 +8,6 @@ import 'element-plus/dist/index.css'
 import './assets/main.css'
 
 const app = createApp(App)
-
 app.use(router)
 // element-plus
 app.use(ElementPlus)

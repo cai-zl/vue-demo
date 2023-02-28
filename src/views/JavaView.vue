@@ -17,6 +17,11 @@ export default {
   methods: {},
   // `mounted` 是生命周期钩子
   mounted() {
+  },
+  beforeCreate () {
+    document.querySelector('body')
+        .setAttribute('style',
+            'background-image: url(public/img/java.jpg);');
   }
 }
 </script>
