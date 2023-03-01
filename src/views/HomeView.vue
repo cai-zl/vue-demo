@@ -23,6 +23,9 @@ export default {
     document.querySelector('body')
         .setAttribute('style',
             'background-image: url(public/img/home.jpg);');
+  },
+  beforeDestroy () {
+    document.querySelector('body').removeAttribute('style')
   }
 }
 </script>

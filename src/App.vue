@@ -10,24 +10,24 @@ import {RouterLink, RouterView} from 'vue-router'
       <li v-for="menu in menus"><a v-bind:href="menu.path">{{ menu.name }}</a></li>
     </ul>
   </header>
-  <!--  <div class="clearfix">-->
-  <!--    <div class="info left">-->
-  <!--      <img class="pic" v-bind:src="info.pic" v-bind:alt="info.name">-->
-  <!--      <h3 class="name">{{ info.name }}</h3>-->
-  <!--      <p><span class="title">现居: </span>{{ info.address }}</p>-->
-  <!--      <p><span class="title">签名:</span>{{ info.sign }}</p>-->
-  <!--      <p><span class="title">联系方式: </span>{{ info.email }}</p>-->
-  <!--      <p><span class="title">技术栈: </span>{{ info.stack }}</p>-->
-  <!--    </div>-->
-  <!--    <div class="info right">-->
-  <!--      <img class="pic" v-bind:src="info.pic" v-bind:alt="info.name">-->
-  <!--      <h3 class="name">{{ info.name }}</h3>-->
-  <!--      <p><span class="title">现居: </span>{{ info.address }}</p>-->
-  <!--      <p><span class="title">签名:</span>{{ info.sign }}</p>-->
-  <!--      <p><span class="title">联系方式: </span>{{ info.email }}</p>-->
-  <!--      <p><span class="title">技术栈: </span>{{ info.stack }}</p>-->
-  <!--    </div>-->
-  <!--  </div>-->
+<!--    <div class="clearfix">-->
+<!--      <div class="info left">-->
+<!--        <img class="pic" v-bind:src="info.pic" v-bind:alt="info.name">-->
+<!--        <h3 class="name">{{ info.name }}</h3>-->
+<!--        <p><span class="title">现居: </span>{{ info.address }}</p>-->
+<!--        <p><span class="title">签名:</span>{{ info.sign }}</p>-->
+<!--        <p><span class="title">联系方式: </span>{{ info.email }}</p>-->
+<!--        <p><span class="title">技术栈: </span>{{ info.stack }}</p>-->
+<!--      </div>-->
+<!--      <div class="info right">-->
+<!--        <img class="pic" v-bind:src="info.pic" v-bind:alt="info.name">-->
+<!--        <h3 class="name">{{ info.name }}</h3>-->
+<!--        <p><span class="title">现居: </span>{{ info.address }}</p>-->
+<!--        <p><span class="title">签名:</span>{{ info.sign }}</p>-->
+<!--        <p><span class="title">联系方式: </span>{{ info.email }}</p>-->
+<!--        <p><span class="title">技术栈: </span>{{ info.stack }}</p>-->
+<!--      </div>-->
+<!--    </div>-->
 
   <RouterView/>
 </template>
@@ -78,15 +78,8 @@ a {
   font-weight: 700;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
 .nav {
+  display: flex;
   width: 1000px;
   margin: 0 auto;
   height: 80px;
@@ -94,17 +87,28 @@ a {
   font-size: 20px;
   text-align: center;
   border-radius: 20px;
+  align-items: center;
+  justify-content: space-around;
 
   a {
-    float: left;
+    display: inline-block;
+    flex: 1;
+    height: 80px;
     width: 200px;
-    border-radius: 20px;
 
-    :hover {
+    &:hover {
       text-decoration: underline;
       color: hsl(0, 3%, 6%);
     }
   }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .info {

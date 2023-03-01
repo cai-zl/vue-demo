@@ -1,9 +1,7 @@
 <template>
-  <main>
-    <div>
+  <div>
 
-    </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -18,10 +16,13 @@ export default {
   // `mounted` 是生命周期钩子
   mounted() {
   },
-  beforeCreate () {
+  beforeCreate() {
     document.querySelector('body')
         .setAttribute('style',
             'background-image: url(public/img/java.jpg);');
+  },
+  beforeDestroy() {
+    document.querySelector('body').removeAttribute('style')
   }
 }
 </script>

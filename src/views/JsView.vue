@@ -17,6 +17,9 @@ export default {
     document.querySelector('body')
         .setAttribute('style',
             'background-image: url(public/img/js.jpg);');
+  },
+  beforeDestroy() {
+    document.querySelector('body').removeAttribute('style')
   }
 }
 </script>

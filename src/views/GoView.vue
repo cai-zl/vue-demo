@@ -15,10 +15,13 @@ export default {
   // `mounted` 是生命周期钩子
   mounted() {
   },
-  beforeCreate () {
+  beforeCreate() {
     document.querySelector('body')
         .setAttribute('style',
             'background-image: url(public/img/go.jpg);');
+  },
+  beforeDestroy() {
+    document.querySelector('body').removeAttribute('style')
   }
 }
 </script>
