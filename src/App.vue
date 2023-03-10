@@ -10,26 +10,7 @@ import {RouterLink, RouterView} from 'vue-router'
       <li v-for="menu in menus"><a v-bind:href="menu.path">{{ menu.name }}</a></li>
     </ul>
   </header>
-<!--    <div class="clearfix">-->
-<!--      <div class="info left">-->
-<!--        <img class="pic" v-bind:src="info.pic" v-bind:alt="info.name">-->
-<!--        <h3 class="name">{{ info.name }}</h3>-->
-<!--        <p><span class="title">现居: </span>{{ info.address }}</p>-->
-<!--        <p><span class="title">签名:</span>{{ info.sign }}</p>-->
-<!--        <p><span class="title">联系方式: </span>{{ info.email }}</p>-->
-<!--        <p><span class="title">技术栈: </span>{{ info.stack }}</p>-->
-<!--      </div>-->
-<!--      <div class="info right">-->
-<!--        <img class="pic" v-bind:src="info.pic" v-bind:alt="info.name">-->
-<!--        <h3 class="name">{{ info.name }}</h3>-->
-<!--        <p><span class="title">现居: </span>{{ info.address }}</p>-->
-<!--        <p><span class="title">签名:</span>{{ info.sign }}</p>-->
-<!--        <p><span class="title">联系方式: </span>{{ info.email }}</p>-->
-<!--        <p><span class="title">技术栈: </span>{{ info.stack }}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-
-  <RouterView/>
+  <router-view ></router-view>
 </template>
 
 <script>
